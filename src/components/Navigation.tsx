@@ -57,7 +57,7 @@ const Navigation = () => {
               'transition-colors duration-300',
               isScrolled ? 'text-foreground' : 'text-white'
             )}>
-              Connect & Grow
+              🕉️ Hindu Association Nepal
             </span>
           </Link>
 

@@ -2,63 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Organization Website Design System - Modern & Professional */
+/* Hindu Association Nepal - Spiritual & Cultural Design System */
 
 @layer base {
   :root {
-    /* Background & Surface Colors */
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --surface: 0 0% 98%;
-    --surface-variant: 220 13% 96%;
+    /* Background & Surface Colors - Cream & Sacred White */
+    --background: 35 25% 98%;
+    --foreground: 15 25% 15%;
+    --surface: 35 20% 96%;
+    --surface-variant: 35 15% 92%;
 
     /* Card & Popover */
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --card: 35 25% 98%;
+    --card-foreground: 15 25% 15%;
+    --popover: 35 25% 98%;
+    --popover-foreground: 15 25% 15%;
 
-    /* Brand Colors - Professional Blue */
-    --primary: 220 100% 50%;
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 220 100% 45%;
-    --primary-light: 220 100% 96%;
+    /* Brand Colors - Sacred Saffron */
+    --primary: 28 100% 55%;
+    --primary-foreground: 35 25% 98%;
+    --primary-hover: 28 100% 50%;
+    --primary-light: 28 50% 95%;
 
-    /* Secondary/Accent - Warm Orange */
-    --secondary: 25 95% 53%;
-    --secondary-foreground: 0 0% 100%;
-    --secondary-hover: 25 95% 48%;
-    --secondary-light: 25 95% 96%;
+    /* Secondary/Accent - Divine Maroon */
+    --secondary: 0 65% 35%;
+    --secondary-foreground: 35 25% 98%;
+    --secondary-hover: 0 65% 30%;
+    --secondary-light: 0 30% 95%;
 
-    /* Neutral Palette */
-    --muted: 220 13% 96%;
-    --muted-foreground: 220 9% 46%;
-    --accent: 220 13% 94%;
-    --accent-foreground: 222.2 84% 4.9%;
+    /* Neutral Palette - Temple Stone */
+    --muted: 35 15% 92%;
+    --muted-foreground: 15 15% 45%;
+    --accent: 45 80% 85%;
+    --accent-foreground: 15 25% 15%;
 
     /* Semantic Colors */
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-    --success: 142 76% 36%;
-    --success-foreground: 0 0% 100%;
-    --warning: 38 92% 50%;
-    --warning-foreground: 0 0% 100%;
+    --destructive-foreground: 35 25% 98%;
+    --success: 130 50% 40%;
+    --success-foreground: 35 25% 98%;
+    --warning: 45 100% 55%;
+    --warning-foreground: 15 25% 15%;
 
-    /* Border & Input */
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 220 100% 50%;
+    /* Border & Input - Sacred Gold */
+    --border: 45 60% 80%;
+    --input: 45 40% 85%;
+    --ring: 28 100% 55%;
 
     /* Design Tokens */
     --radius: 0.75rem;
     --radius-lg: 1rem;
     --radius-xl: 1.5rem;
     
-    /* Gradients */
+    /* Sacred Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-hover)));
     --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-hover)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-divine: linear-gradient(135deg, hsl(28 100% 55%) 0%, hsl(0 65% 35%) 50%, hsl(45 100% 60%) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(var(--surface)) 0%, hsl(var(--background)) 100%);
+    --gradient-temple: radial-gradient(circle at center, hsl(45 80% 95%) 0%, hsl(35 25% 98%) 100%);
     
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(220 13% 91% / 0.2);
@@ -84,41 +86,41 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --surface: 222.2 84% 6%;
-    --surface-variant: 217.2 32.6% 17.5%;
+    --background: 15 25% 8%;
+    --foreground: 35 25% 95%;
+    --surface: 15 25% 10%;
+    --surface-variant: 15 20% 15%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --card: 15 25% 8%;
+    --card-foreground: 35 25% 95%;
+    --popover: 15 25% 8%;
+    --popover-foreground: 35 25% 95%;
 
-    --primary: 220 100% 60%;
-    --primary-foreground: 222.2 84% 4.9%;
-    --primary-hover: 220 100% 65%;
-    --primary-light: 220 100% 8%;
+    --primary: 28 100% 65%;
+    --primary-foreground: 15 25% 8%;
+    --primary-hover: 28 100% 70%;
+    --primary-light: 28 50% 15%;
 
-    --secondary: 25 95% 58%;
-    --secondary-foreground: 222.2 84% 4.9%;
-    --secondary-hover: 25 95% 63%;
-    --secondary-light: 25 95% 8%;
+    --secondary: 0 65% 45%;
+    --secondary-foreground: 35 25% 95%;
+    --secondary-hover: 0 65% 50%;
+    --secondary-light: 0 30% 15%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --muted: 15 20% 15%;
+    --muted-foreground: 35 15% 60%;
+    --accent: 45 40% 20%;
+    --accent-foreground: 35 25% 95%;
 
     --destructive: 0 62.8% 50.6%;
-    --destructive-foreground: 210 40% 98%;
-    --success: 142 76% 46%;
-    --success-foreground: 210 40% 98%;
-    --warning: 38 92% 60%;
-    --warning-foreground: 222.2 84% 4.9%;
+    --destructive-foreground: 35 25% 95%;
+    --success: 130 50% 50%;
+    --success-foreground: 35 25% 95%;
+    --warning: 45 100% 65%;
+    --warning-foreground: 15 25% 8%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 220 100% 60%;
+    --border: 15 20% 20%;
+    --input: 15 20% 18%;
+    --ring: 28 100% 65%;
 
     --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.2);
     --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
@@ -143,37 +145,65 @@
 }
 
 @layer components {
-  /* Hero Section Styles */
+  /* Sacred Hero Section */
   .hero-section {
     @apply relative min-h-screen flex items-center justify-center;
-    background: var(--gradient-hero);
+    background: var(--gradient-divine);
+    position: relative;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 20% 30%, hsl(45 100% 60% / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, hsl(28 100% 55% / 0.1) 0%, transparent 50%);
+    pointer-events: none;
   }
 
   .hero-overlay {
-    @apply absolute inset-0 bg-gradient-to-b from-black/20 to-black/40;
+    @apply absolute inset-0 bg-gradient-to-b from-black/30 to-black/50;
   }
 
-  /* Button Variants */
+  /* Sacred Button Variants */
   .btn-hero {
-    @apply bg-white/90 text-primary hover:bg-white hover:scale-105;
+    @apply bg-white/95 text-primary hover:bg-white hover:scale-105 font-semibold;
     box-shadow: var(--shadow-lg);
     transition: var(--transition-smooth);
+    border: 2px solid hsl(45 100% 60% / 0.3);
   }
 
   .btn-secondary-hero {
-    @apply border-2 border-white/80 text-white hover:bg-white/10 hover:border-white;
+    @apply border-2 border-white/90 text-white hover:bg-white/15 hover:border-white backdrop-blur-sm;
     transition: var(--transition-smooth);
   }
 
-  /* Card Styles */
+  /* Sacred Card Styles */
   .card-hover {
-    @apply transform hover:scale-105 hover:-translate-y-2;
+    @apply transform hover:scale-105 hover:-translate-y-2 border border-accent/30;
     transition: var(--transition-smooth);
     box-shadow: var(--shadow-md);
+    background: var(--gradient-temple);
   }
 
   .card-hover:hover {
     box-shadow: var(--shadow-xl);
+    border-color: hsl(45 100% 60% / 0.5);
+  }
+
+  /* Om Symbol Pattern */
+  .om-pattern::before {
+    content: '🕉️';
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    opacity: 0.1;
+    pointer-events: none;
   }
 
   /* Navigation Styles */

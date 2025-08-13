@@ -1,40 +1,40 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Calendar, Award, Heart, TrendingUp, Globe } from 'lucide-react';
+import { ArrowRight, Users, Calendar, Heart, Flower2, Sunrise, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Layout from '@/components/Layout';
-import heroBg from '@/assets/hero-bg.jpg';
+import heroBg from '@/assets/hindu-temple-hero.jpg';
 
 const Index = () => {
   const features = [
     {
-      icon: Users,
-      title: 'Community Building',
-      description: 'Connect with like-minded professionals and build lasting relationships that drive mutual growth and success.',
+      icon: Flower2,
+      title: 'Spiritual Growth',
+      description: 'Deepen your connection with Sanatan Dharma through meditation, yoga practices, and ancient wisdom teachings.',
     },
     {
       icon: Calendar,
-      title: 'Engaging Events',
-      description: 'Participate in workshops, networking sessions, and conferences designed to enhance your skills and expand your network.',
+      title: 'Cultural Festivals',
+      description: 'Celebrate Hindu festivals and cultural events that preserve our rich heritage and unite our community.',
     },
     {
-      icon: Award,
-      title: 'Professional Development',
-      description: 'Access resources, mentorship programs, and training opportunities to accelerate your career advancement.',
+      icon: BookOpen,
+      title: 'Dharmic Education',
+      description: 'Learn from sacred texts, participate in satsangs, and gain knowledge of Hindu philosophy and traditions.',
     },
     {
       icon: Heart,
-      title: 'Social Impact',
-      description: 'Join initiatives that make a difference in our community and create positive change in the world around us.',
+      title: 'Community Service',
+      description: 'Engage in seva (selfless service) projects that uplift society and embody the principles of dharma.',
     },
   ];
 
   const stats = [
-    { number: '2,500+', label: 'Active Members' },
-    { number: '150+', label: 'Events Hosted' },
-    { number: '50+', label: 'Partner Organizations' },
-    { number: '95%', label: 'Satisfaction Rate' },
+    { number: '1,200+', label: 'Devoted Members' },
+    { number: '75+', label: 'Festivals Celebrated' },
+    { number: '25+', label: 'Temples Connected' },
+    { number: '100%', label: 'Cultural Preservation' },
   ];
 
   return (
@@ -48,15 +48,18 @@ const Index = () => {
         <div className="hero-overlay" />
         <div className="relative z-10 container-custom text-center text-white">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Building Communities,{' '}
-              <span className="text-gradient bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                Creating Impact
+            <div className="text-center mb-6">
+              <span className="text-6xl md:text-8xl mb-4 block">🕉️</span>
+            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight font-serif">
+              Preserving Sanatan Dharma,{' '}
+              <span className="text-gradient bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text text-transparent">
+                Nurturing Souls
               </span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 leading-relaxed">
-              Join our vibrant community of professionals, innovators, and change-makers. 
-              Together, we're fostering growth, creating connections, and making a positive impact.
+              Welcome to Hindu Association Nepal - a sacred space dedicated to preserving our eternal dharma, 
+              celebrating our rich cultural heritage, and fostering spiritual growth through ancient wisdom.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -86,11 +89,11 @@ const Index = () => {
       <section className="section-padding bg-surface">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why Join Connect & Grow?
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-serif">
+              Why Join Our Sacred Community?
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We're more than just an organization – we're a catalyst for personal and professional transformation.
+              We are guardians of ancient wisdom, cultivators of spiritual growth, and preservers of our eternal dharma.
             </p>
           </div>
           
@@ -100,14 +103,14 @@ const Index = () => {
               return (
                 <Card 
                   key={feature.title} 
-                  className="card-hover border-0 bg-background"
+                  className="card-hover border-0 bg-background om-pattern relative overflow-hidden"
                   style={{ '--stagger': index } as React.CSSProperties}
                 >
                   <CardHeader className="text-center pb-4">
-                    <div className="mx-auto bg-gradient-primary rounded-lg p-3 w-fit mb-4">
+                    <div className="mx-auto bg-gradient-divine rounded-full p-4 w-fit mb-4 shadow-lg">
                       <Icon className="h-8 w-8 text-white" />
                     </div>
-                    <CardTitle className="text-xl font-semibold">
+                    <CardTitle className="text-xl font-semibold font-serif">
                       {feature.title}
                     </CardTitle>
                   </CardHeader>
@@ -124,8 +127,9 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="section-padding bg-gradient-primary">
-        <div className="container-custom">
+      <section className="section-padding bg-gradient-divine relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10"></div>
+        <div className="container-custom relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
             {stats.map((stat, index) => (
               <div 
@@ -148,14 +152,16 @@ const Index = () => {
       {/* CTA Section */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="bg-gradient-subtle rounded-2xl p-8 md:p-12 text-center shadow-xl">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Ready to Connect and Grow?
+          <div className="bg-gradient-temple rounded-2xl p-8 md:p-12 text-center shadow-xl border border-accent/30 relative overflow-hidden">
+            <div className="absolute top-4 left-4 text-4xl opacity-10">🕉️</div>
+            <div className="absolute bottom-4 right-4 text-4xl opacity-10">🪷</div>
+            <div className="max-w-3xl mx-auto relative z-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-serif">
+                Ready to Begin Your Spiritual Journey?
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Join thousands of professionals who are already part of our thriving community. 
-                Your journey of growth and meaningful connections starts here.
+                Join our sacred community dedicated to preserving dharma and fostering spiritual growth. 
+                Your path to enlightenment and cultural connection starts here.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
@@ -164,17 +170,17 @@ const Index = () => {
                   asChild
                 >
                   <Link to="/contact">
-                    Get Started Today
+                    Join Our Sangha
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="px-8 py-4 text-lg font-semibold"
+                  className="px-8 py-4 text-lg font-semibold border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                   asChild
                 >
-                  <Link to="/about">View Our Impact</Link>
+                  <Link to="/about">Discover Our Mission</Link>
                 </Button>
               </div>
             </div>

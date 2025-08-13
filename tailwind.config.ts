@@ -75,8 +75,9 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
-				serif: ['Georgia', 'serif'],
-				mono: ['Fira Code', 'monospace']
+				serif: ['Crimson Text', 'Georgia', 'serif'],
+				mono: ['Fira Code', 'monospace'],
+				devanagari: ['Noto Sans Devanagari', 'Inter', 'system-ui', 'sans-serif']
 			},
 			fontSize: {
 				xs: 'var(--font-size-xs)',
@@ -100,7 +101,9 @@ export default {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-secondary': 'var(--gradient-secondary)',
 				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-subtle': 'var(--gradient-subtle)'
+				'gradient-divine': 'var(--gradient-divine)',
+				'gradient-subtle': 'var(--gradient-subtle)',
+				'gradient-temple': 'var(--gradient-temple)'
 			},
 			keyframes: {
 				'accordion-down': {

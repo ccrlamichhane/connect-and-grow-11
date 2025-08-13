@@ -33,15 +33,15 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <div className="bg-gradient-primary rounded-lg p-2">
+              <div className="bg-gradient-divine rounded-lg p-2">
                 <Users className="h-6 w-6 text-white" />
               </div>
-              <span className="text-xl font-bold text-foreground">
-                Connect & Grow
+              <span className="text-xl font-bold text-foreground font-serif">
+                🕉️ Hindu Association Nepal
               </span>
             </Link>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Building communities, fostering professional development, and creating positive social impact through innovative programs and meaningful connections.
+              Preserving Sanatan Dharma and nurturing spiritual growth through ancient wisdom, cultural celebrations, and dharmic practices in Nepal.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => {
@@ -107,22 +107,22 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                 <span className="text-muted-foreground">
-                  123 Community St, Growth City, GC 12345
+                  Pashupatinath Temple Area, Kathmandu, Nepal
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-primary flex-shrink-0" />
                 <span className="text-muted-foreground">
-                  (555) 123-4567
+                  +977-1-4567890
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-primary flex-shrink-0" />
                 <a
-                  href="mailto:hello@connectandgrow.org"
+                  href="mailto:contact@hinduassociationnepal.org"
                   className="text-muted-foreground hover:text-primary transition-colors duration-300"
                 >
-                  hello@connectandgrow.org
+                  contact@hinduassociationnepal.org
                 </a>
               </div>
             </div>
@@ -133,7 +133,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-muted-foreground text-sm">
-              © {currentYear} Connect & Grow. All rights reserved.
+              © {currentYear} Hindu Association Nepal. All rights reserved. | धर्मो रक्षति रक्षितः
             </p>
             <div className="flex space-x-6 text-sm">
               <a
