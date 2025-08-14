@@ -4,37 +4,39 @@ import { ArrowRight, Users, Calendar, Heart, Flower2, Sunrise, BookOpen } from '
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Layout from '@/components/Layout';
+import { useLanguage } from '@/contexts/LanguageContext';
 import heroBg from '@/assets/hindu-temple-hero.jpg';
 
 const Index = () => {
+  const { t } = useLanguage();
   const features = [
     {
       icon: Flower2,
-      title: 'Spiritual Growth',
-      description: 'Deepen your connection with Sanatan Dharma through meditation, yoga practices, and ancient wisdom teachings.',
+      title: t('home.features.spiritualTitle'),
+      description: t('home.features.spiritualDesc'),
     },
     {
       icon: Calendar,
-      title: 'Cultural Festivals',
-      description: 'Celebrate Hindu festivals and cultural events that preserve our rich heritage and unite our community.',
+      title: t('home.features.festivalTitle'),
+      description: t('home.features.festivalDesc'),
     },
     {
       icon: BookOpen,
-      title: 'Dharmic Education',
-      description: 'Learn from sacred texts, participate in satsangs, and gain knowledge of Hindu philosophy and traditions.',
+      title: t('home.features.educationTitle'),
+      description: t('home.features.educationDesc'),
     },
     {
       icon: Heart,
-      title: 'Community Service',
-      description: 'Engage in seva (selfless service) projects that uplift society and embody the principles of dharma.',
+      title: t('home.features.communityTitle'),
+      description: t('home.features.communityDesc'),
     },
   ];
 
   const stats = [
-    { number: '1,200+', label: 'Devoted Members' },
-    { number: '75+', label: 'Festivals Celebrated' },
-    { number: '25+', label: 'Temples Connected' },
-    { number: '100%', label: 'Cultural Preservation' },
+    { number: '500+', label: t('home.stats.members') },
+    { number: '50+', label: t('home.stats.events') },
+    { number: '12', label: t('home.stats.temples') },
+    { number: '5', label: t('home.stats.years') },
   ];
 
   return (
@@ -52,14 +54,13 @@ const Index = () => {
               <span className="text-6xl md:text-8xl mb-4 block">🕉️</span>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight font-serif">
-              Preserving Sanatan Dharma,{' '}
-              <span className="text-gradient bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text text-transparent">
-                Nurturing Souls
-              </span>
+              {t('hero.title')}
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white/90 leading-relaxed">
-              Welcome to Hindu Association Nepal - a sacred space dedicated to preserving our eternal dharma, 
-              celebrating our rich cultural heritage, and fostering spiritual growth through ancient wisdom.
+            <p className="text-xl md:text-2xl mb-4 text-white/90 font-medium">
+              {t('hero.subtitle')}
+            </p>
+            <p className="text-lg md:text-xl mb-8 text-white/80 leading-relaxed">
+              {t('hero.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -68,7 +69,7 @@ const Index = () => {
                 asChild
               >
                 <Link to="/events">
-                  Explore Events
+                  {t('hero.joinUsBtn')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -78,7 +79,7 @@ const Index = () => {
                 className="btn-secondary-hero px-8 py-4 text-lg font-semibold"
                 asChild
               >
-                <Link to="/about">Learn More</Link>
+                <Link to="/about">{t('hero.learnMoreBtn')}</Link>
               </Button>
             </div>
           </div>
@@ -90,10 +91,10 @@ const Index = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-serif">
-              Why Join Our Sacred Community?
+              {t('home.welcomeTitle')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We are guardians of ancient wisdom, cultivators of spiritual growth, and preservers of our eternal dharma.
+              {t('home.welcomeSubtitle')}
             </p>
           </div>
           
