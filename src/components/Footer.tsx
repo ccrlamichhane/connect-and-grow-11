@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Users, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
@@ -37,11 +39,11 @@ const Footer = () => {
                 <Users className="h-6 w-6 text-white" />
               </div>
               <span className="text-xl font-bold text-foreground font-serif">
-                🕉️ Hindu Association Nepal
+                🕉️ {t('hero.title')}
               </span>
             </Link>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Preserving Sanatan Dharma and nurturing spiritual growth through ancient wisdom, cultural celebrations, and dharmic practices in Nepal.
+              {t('footer.mission')}
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => {
@@ -63,51 +65,37 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold text-foreground mb-4">
-              Quick Links
+              {t('footer.quickLinks')}
             </h3>
             <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors duration-300"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
+              <li><Link to="/" className="text-muted-foreground hover:text-primary transition-colors duration-300">{t('nav.home')}</Link></li>
+              <li><Link to="/events" className="text-muted-foreground hover:text-primary transition-colors duration-300">{t('nav.events')}</Link></li>
+              <li><Link to="/gallery" className="text-muted-foreground hover:text-primary transition-colors duration-300">{t('nav.gallery')}</Link></li>
+              <li><Link to="/blogs" className="text-muted-foreground hover:text-primary transition-colors duration-300">{t('nav.blogs')}</Link></li>
             </ul>
           </div>
 
           {/* About */}
           <div>
             <h3 className="text-lg font-semibold text-foreground mb-4">
-              About
+              {t('nav.about')}
             </h3>
             <ul className="space-y-2">
-              {aboutLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors duration-300"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
+              <li><Link to="/about" className="text-muted-foreground hover:text-primary transition-colors duration-300">{t('nav.about')}</Link></li>
+              <li><Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors duration-300">{t('nav.contact')}</Link></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold text-foreground mb-4">
-              Contact Info
+              {t('footer.contact')}
             </h3>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                 <span className="text-muted-foreground">
-                  Pashupatinath Temple Area, Kathmandu, Nepal
+                  {t('footer.location')}
                 </span>
               </div>
               <div className="flex items-center space-x-3">
@@ -133,7 +121,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-muted-foreground text-sm">
-              © {currentYear} Hindu Association Nepal. All rights reserved. | धर्मो रक्षति रक्षितः
+              © {currentYear} {t('hero.title')}. {t('footer.allRights')} | {t('footer.sanskrit')}
             </p>
             <div className="flex space-x-6 text-sm">
               <a
