@@ -43,43 +43,43 @@ const Index = () => {
     <Layout>
       {/* Hero Section */}
       <section className="hero-section">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
         <div className="hero-overlay" />
         <div className="relative z-10 container-custom text-center text-white">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-6">
+            {/* <div className="text-center mb-6">
               <span className="text-6xl md:text-8xl mb-4 block">🕉️</span>
-            </div>
+            </div> */}
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight font-serif">
-              {t('hero.title')}
+              {t("hero.fullName")}
             </h1>
             <p className="text-xl md:text-2xl mb-4 text-white/90 font-medium">
-              {t('hero.subtitle')}
+              {t("hero.subtitle")}
             </p>
             <p className="text-lg md:text-xl mb-8 text-white/80 leading-relaxed">
-              {t('hero.description')}
+              {t("hero.description")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="btn-hero px-8 py-4 text-lg font-semibold"
                 asChild
               >
                 <Link to="/events">
-                  {t('hero.joinUsBtn')}
+                  {t("hero.joinUsBtn")}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
+              <Button
+                size="lg"
+                variant="outline"
                 className="btn-secondary-hero px-8 py-4 text-lg font-semibold"
                 asChild
               >
-                <Link to="/about">{t('hero.learnMoreBtn')}</Link>
+                <Link to="/about">{t("hero.learnMoreBtn")}</Link>
               </Button>
             </div>
           </div>
@@ -91,21 +91,21 @@ const Index = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-serif">
-              {t('home.welcomeTitle')}
+              {t("home.welcomeTitle")}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              {t('home.welcomeSubtitle')}
+              {t("home.welcomeSubtitle")}
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
-                <Card 
-                  key={feature.title} 
+                <Card
+                  key={feature.title}
                   className="card-hover border-0 bg-background om-pattern relative overflow-hidden"
-                  style={{ '--stagger': index } as React.CSSProperties}
+                  style={{ "--stagger": index } as React.CSSProperties}
                 >
                   <CardHeader className="text-center pb-4">
                     <div className="mx-auto bg-gradient-divine rounded-full p-4 w-fit mb-4 shadow-lg">
@@ -133,10 +133,10 @@ const Index = () => {
         <div className="container-custom relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
             {stats.map((stat, index) => (
-              <div 
+              <div
                 key={stat.label}
                 className="fade-in-up"
-                style={{ '--stagger': index } as React.CSSProperties}
+                style={{ "--stagger": index } as React.CSSProperties}
               >
                 <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
                   {stat.number}
@@ -155,18 +155,21 @@ const Index = () => {
         <div className="container-custom">
           <div className="bg-gradient-temple rounded-2xl p-8 md:p-12 text-center shadow-xl border border-accent/30 relative overflow-hidden">
             <div className="absolute top-4 left-4 text-4xl opacity-10">🕉️</div>
-            <div className="absolute bottom-4 right-4 text-4xl opacity-10">🪷</div>
+            <div className="absolute bottom-4 right-4 text-4xl opacity-10">
+              🪷
+            </div>
             <div className="max-w-3xl mx-auto relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-serif">
                 Ready to Begin Your Spiritual Journey?
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Join our sacred community dedicated to preserving dharma and fostering spiritual growth. 
-                Your path to enlightenment and cultural connection starts here.
+                Join our sacred community dedicated to preserving dharma and
+                fostering spiritual growth. Your path to enlightenment and
+                cultural connection starts here.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   className="px-8 py-4 text-lg font-semibold"
                   asChild
                 >
@@ -175,9 +178,9 @@ const Index = () => {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
+                <Button
+                  size="lg"
+                  variant="outline"
                   className="px-8 py-4 text-lg font-semibold border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                   asChild
                 >
